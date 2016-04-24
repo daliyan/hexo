@@ -6,10 +6,10 @@ menu:
 
 # SubNav
 subnav:
-  github: https://github.com/mmrxia
-  weibo: http://weibo.com/u/1984883035
-  twitter: https://twitter.com/xiaqingsong
-  linkedin: http://www.linkedin.com/in/mrxia
+  github: "https://github.com/mmrxia"
+  weibo: "http://weibo.com/u/1984883035"
+  twitter: "https://twitter.com/xiaqingsong"
+  linkedin: "http://www.linkedin.com/in/mrxia"
   #mail: "this.xqs@gmail.com"
   #rss: "#"
   #zhihu: "#"
@@ -35,7 +35,7 @@ google_analytics: ''
 favicon: /favicon.png
 
 #你的头像url
-avatar: https://avatars2.githubusercontent.com/u/6917388?s=150
+avatar: "https://avatars2.githubusercontent.com/u/6917388?s=150"
 #是否开启分享
 share_jia: true
 share_addthis: false
@@ -50,11 +50,11 @@ tagcloud: true
 #friends: true
 #开启——
 friends:
-  XQS: http://www.xiaqingsong.com
-  MORG: http://www.morg.cn
+  XQS: "http://www.xiaqingsong.com"
+  MORG: "http://www.morg.cn"
 
 #是否开启“关于我”。
 #不开启——
 #aboutme: false
 #开启——
-aboutme: 我是夏青松，专注web前端领域，致力成为一名优秀web前端工程师。 Mail: this.xqs@gmail.com
+aboutme: "我是夏青松，专注web前端领域，致力成为一名优秀web前端工程师。 Mail: this.xqs@gmail.com"
