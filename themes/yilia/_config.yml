@@ -11,7 +11,7 @@ subnav:
   twitter: "https://twitter.com/xiaqingsong"
   linkedin: "http://www.linkedin.com/in/mrxia"
   #mail: "this.xqs@gmail.com"
-  #rss: "#"
+  rss: "/atom.xml"
   #zhihu: "#"
   #douban: "#"
   #facebook: "#"
