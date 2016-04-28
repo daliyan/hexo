@@ -32,10 +32,10 @@ open_in_new: false
 
 # Miscellaneous
 google_analytics: "UA-76943829-1"
-favicon: /favicon.png
+favicon: "http://7xth8v.com2.z0.glb.clouddn.com/icon/favicon.ico"
 
 #你的头像url
-avatar: "https://avatars2.githubusercontent.com/u/6917388?s=150"
+avatar: "http://7xth8v.com2.z0.glb.qiniucdn.com/image/avatar_150x150.jpg"
 #是否开启分享
 share_jia: false
 share_addthis: false
