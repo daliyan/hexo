@@ -29,6 +29,6 @@ $.merge 只能合并一维数组，且一次只能合并2个，个人觉得没�
 
 
 其他参考：
-1. javascript 原始类型和引用类型
+1. [javascript 原始类型和引用类型](http://www.html-js.com/article/1589)
 
 
