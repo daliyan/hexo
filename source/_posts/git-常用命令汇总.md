@@ -35,6 +35,7 @@ touch .gitignore
 ```
 
 + 查看文件
+
 ```language-git
 vim README.md
 ```
