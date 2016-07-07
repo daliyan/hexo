@@ -6,7 +6,7 @@ tags: [git, Linux]
 
 #### 1. 安装git
 
-```bash
+```language-bash
 [root@localhost ~]# yum install git
 ```
 
@@ -14,13 +14,13 @@ tags: [git, Linux]
 
 1 . 进入 `.ssh` 目录
 
-```bash
+```language-bash
 [root@localhost ~]# cd .ssh/
 ```
 
 2 . 生成ssh-keygen
 
-```bash
+```language-bash
 [root@localhost .ssh]# ssh-keygen -t rsa -C 'this.xqs@gmail.com'
 ```
 
@@ -37,7 +37,7 @@ The key fingerprint is:
     
 3 . 复制 `id_rsa.pub` 文件中的内容，粘贴到github新增的ssh keys中。
 
-```bash
+```language-bash
 [root@localhost .ssh]# ls
 // id_rsa  id_rsa.pub
    
@@ -46,14 +46,14 @@ The key fingerprint is:
 
 4 . 配置用户名和邮箱
 
-```bash
+```language-bash
 [root@localhost .ssh]# git config --global user.name 'bandwagonhost vps'
 [root@localhost .ssh]# git config --global user.email 'this.xqs@gmail.com'
 ```
 
 5. 测试连接
 
-```bash
+```language-bash
 [root@localhost .ssh]# ssh -T git@github.com
 Hi mmrxia! You've successfully authenticated, but GitHub does not provide shell access.
 ```

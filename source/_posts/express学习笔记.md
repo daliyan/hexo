@@ -15,7 +15,7 @@ tags: [nodejs, express]
 区别是这样，`app.render`只负责生成视图，你会发现它是没能力把视图响应给客户端（浏览器）的，只有`res.render`手里有`response`对象，可以把视图响应给客户端。   
 `res.render`的伪代码可以看做如下: 
    
-```javascript
+```language-javascript
 res.render = function(view, locals, cb){
     app.render(view, locals, function(err, html){
         if(typeof cb !== 'undefined'){
@@ -35,7 +35,7 @@ res.render = function(view, locals, cb){
 
 代码示例：     
 
-```javascript
+```language-javascript
 //res.send
 app.get('/user/:id', function(req, res){
   res.send('user ' + req.params.id);
@@ -47,4 +47,29 @@ app.get('/user/:id', function(req, res){
  res.end();
 });
 ```
+
+#### 3. 获取request请求参数的方法？
+
+express获取参数有三种方法：  
+
+官网实例：   
+       
+> Checks route params (req.params), ex: /user/:id     
+> Checks query string params (req.query), ex: ?id=12     
+> Checks urlencoded body params (req.body), ex: id=    
+   
++ 例如：127.0.0.1:3000/index，得到index，可以通过使用`req.params`得到；   
++ 例如：127.0.0.1:3000/index?id=12，这种情况下，这种方式是获取客户端get方式传递过来的值，通过使用`req.query.id`可以获得；     
++ 例如：127.0.0.1：300/index，然后post了一个id=2的值，这种方式是获取客户端post过来的数据，可以通过`req.body.id`获取； 
+  
+注：post请求，第三种方式需要以下配置：
+
+```language-javascript
+   var express        =         require("express");  
+   var bodyParser     =         require("body-parser");  
+   var app            =         express();  
+     
+   app.use(bodyParser.urlencoded({ extended: false }));   // necessary
+```
+ 
 

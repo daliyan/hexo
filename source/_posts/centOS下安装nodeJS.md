@@ -8,20 +8,20 @@ tags: [nodejs, Linux]
 
 1 . 安装gcc-c编译器
   
-```bash
+```language-bash
 [root@localhost ~]# sudo yum install gcc gcc-c++
 ```
 
 2 . 现在nodejs源码并解压  
 
-```bash
+```language-bash
 [root@localhost ~]# wget https://nodejs.org/dist/v4.4.7/node-v4.4.7-linux-x86.tar.gz
 [root@localhost ~]# tar xvf node-v4.4.7-linux-x86
 ```
 
 3 . 编译
 
-```bash
+```language-bash
 [root@localhost ~]# ./configure
 [root@localhost ~]# make && make install
 ```
@@ -31,21 +31,21 @@ tags: [nodejs, Linux]
 
 1 . 获取nvm
 
-``` bash
+``` language-bash
 wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.31.2/install.sh | bash
 ```
 
 2 . 安装nodejs
  
  可用 `nvm ls-remote` 列出所有可安装的node版本，然后安装需要的版本。
- ```bash
+ ```language-bash
  nvm install v4.4.7
  ```
  
 
 安装完成后可查看node版本。
 
-```bash
+```language-bash
 node -v
 ```
  
