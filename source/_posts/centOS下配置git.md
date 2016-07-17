@@ -51,7 +51,7 @@ The key fingerprint is:
 [root@localhost .ssh]# git config --global user.email 'this.xqs@gmail.com'
 ```
 
-5. 测试连接
+5 . 测试连接
 
 ```language-bash
 [root@localhost .ssh]# ssh -T git@github.com
