@@ -4,7 +4,7 @@ date: 2016-07-01 15:32:01
 tags: [nodejs, express]
 ---
 
-#### 1. app.render和res.render方法的区别？
+#### 1 . app.render和res.render方法的区别？
 
 官方的api文档中是这么说的：   
 > Think of app.render() as a utility function for generating rendered view strings. Internally res.render() uses app.render() to render views.
@@ -26,7 +26,7 @@ res.render = function(view, locals, cb){
 };
 ```   
 
-#### 2. res.write和res.send区别？
+#### 2 . res.write和res.send区别？
 
 > The res object represents the HTTP response that an Express app sends when it gets an HTTP request.
 
@@ -48,7 +48,7 @@ app.get('/user/:id', function(req, res){
 });
 ```
 
-#### 3. 获取request请求参数的方法？
+#### 3 . 获取request请求参数的方法？
 
 express获取参数有三种方法：  
 
@@ -70,6 +70,47 @@ express获取参数有三种方法：
    var app            =         express();  
      
    app.use(bodyParser.urlencoded({ extended: false }));   // necessary
+```
+
+#### 4 . session使用入门
+
+`express-session`是express中比较常用的处理session的中间件,使用npm安装：
+
+```language-git
+$ npm install express-session save
+```
+session的认证机制必须依赖cookie，所以还应该同时安装一个`cookie-parser`，安装方法同上。然后再app.js中导入这两个中间件：
+
+```language-javascript
+var cookieParser = require('cookie-parser');
+var session = require('express-session');
+```
+
+之后定义cookie解析器，注意，该定义必须写在路由分配之前：
+
+```language-javascript
+app.use(cookieParser());
+app.use(session({
+  secret: 'secret_string',
+  name: 'name',
+  cookie: {maxAge: 60000},
+  resave: false,
+  saveUninitialized: true,
+}));
+```
+
+各参数意义：    
+`secret`：用来对session数据进行加密的字符串.这个属性值为必须指定的属性。   
+`name`：表示cookie的name，默认cookie的name是：connect.sid。    
+`maxAge`：cookie过期时间，毫秒。     
+`resave`：是指每次请求都重新设置session cookie，假设你的cookie是6000毫秒过期，每次请求都会再设置6000毫秒。     
+`saveUninitialized`： 是指无论有没有session cookie，每次请求都设置个session cookie ，默认给个标示为 connect.sid。     
+
+之后在处理请求时直接通过以下方式对session进行读写：        
+
+```language-javascript
+req.session.userinfo = userinfo;  //写入至session
+res.redirect(req.session.userinfo); //从session中读取
 ```
  
 
