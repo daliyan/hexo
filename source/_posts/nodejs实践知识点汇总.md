@@ -24,7 +24,9 @@ npm init
 npm install
 ```
 
---save 命令，安装模块时，写入到package.json的依赖字段（dependencies）中。示例：
+--save 命令，安装模块时，写入到package.json的依赖字段（dependencies）中。   
+使用`--save-dev`命令，可写入到开发依赖字段（devDependencies）中。   
+示例：
 
 ```language-git
 npm install express --save
