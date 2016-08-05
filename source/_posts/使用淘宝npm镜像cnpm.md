@@ -12,20 +12,20 @@ tags: [npm, cnpm]
 
 (1)[临时]通过 `config` 配置指向国内镜像源
 
-```
+```language-git
 # 配置指向源
 npm config set registry http://registry.cnpmjs.org
 ```
 
 (2)[临时]通过 `npm` 命令指定下载源
 
-```
+```language-git
 npm --registry http://registry.cnpmjs.org 
 ```
 
 (3)[linux]在配置文件 `~/.npmrc` 文件写入源地址
 
-```
+```language-git
 //打开配置文件
 nano ~/.npmrc
 //写入配置文件
@@ -38,7 +38,7 @@ registry =https://registry.npm.taobao.org
  
 配置后可通过下面方式来验证是否成功
 
-```
+```language-git
 npm config get registry
 // 或
 npm info express
@@ -51,12 +51,12 @@ npm info express
 
 或者你也可以安装`cnpm`包，使用`cnpm`替代`npm`：
 
-```
+```language-git
 npm install -g cnpm --registry=https://registry.npm.taobao.org
 ```
 
 然后使用 `cnpm` 安装模块：
 
-```
+```language-git
 cnpm install [module-name]
 ```
