@@ -8,7 +8,7 @@ tags: [npm, cnpm]
 但因为国内网络原因，使用 npm 安装某些模块会非常慢，甚至无法安装所有的包。   
 幸运的是,国内有几个镜像站点可以供我们使用,比如 `https://registry.cnpmjs.org`、`https://registry.npm.taobao.org`,速度非常快,镜像站会实时更新,为我们节省了好多时间.    
    
-那么,如何给本机换源呢?
+##### 那么,如何给本机换源呢?
 
 (1)[临时]通过 `config` 配置指向国内镜像源
 
@@ -36,7 +36,9 @@ registry =https://registry.npm.taobao.org
 如果你不想使用国内镜像站点,只需要将 写入 `~/.npmrc` 的配置内容删除即可.   
 
 
-或者可以直接安装`cnpm`包：
+##### 使用cnpm
+
+或者你也可以安装`cnpm`包，使用`cnpm`替代`npm`：
 
 ```
 npm install -g cnpm --registry=https://registry.npm.taobao.org
