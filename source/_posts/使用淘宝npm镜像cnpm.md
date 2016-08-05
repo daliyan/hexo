@@ -33,7 +33,18 @@ registry =https://registry.npm.taobao.org
 ```
 
 推荐使用最后一种方法,一劳永逸,前面2钟方法都是临时改变包下载源.   
-如果你不想使用国内镜像站点,只需要将 写入 `~/.npmrc` 的配置内容删除即可.   
+如果你不想使用国内镜像站点,只需要将 写入 `~/.npmrc` 的配置内容删除即可.  
+
+ 
+配置后可通过下面方式来验证是否成功
+
+```
+npm config get registry
+// 或
+npm info express
+```
+
+
 
 
 ##### 使用cnpm
