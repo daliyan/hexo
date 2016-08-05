@@ -10,20 +10,20 @@ tags: [npm, cnpm]
    
 那么,如何给本机换源呢?
 
-(1)[临时]通过 config 配置指向国内镜像源
+(1)[临时]通过 `config` 配置指向国内镜像源
 
 ```
 # 配置指向源
 npm config set registry http://registry.cnpmjs.org
 ```
 
-(2)[临时]通过 npm 命令指定下载源
+(2)[临时]通过 `npm` 命令指定下载源
 
 ```
 npm --registry http://registry.cnpmjs.org 
 ```
 
-(3)[linux]在配置文件 ~/.npmrc 文件写入源地址
+(3)[linux]在配置文件 `~/.npmrc` 文件写入源地址
 
 ```
 //打开配置文件
@@ -33,16 +33,16 @@ registry =https://registry.npm.taobao.org
 ```
 
 推荐使用最后一种方法,一劳永逸,前面2钟方法都是临时改变包下载源.   
-如果你不想使用国内镜像站点,只需要将 写入 ~/.npmrc 的配置内容删除即可.   
+如果你不想使用国内镜像站点,只需要将 写入 `~/.npmrc` 的配置内容删除即可.   
 
 
-或者可以直接安装cnpm包：
+或者可以直接安装`cnpm`包：
 
 ```
 npm install -g cnpm --registry=https://registry.npm.taobao.org
 ```
 
-然后使用 cnpm 安装模块：
+然后使用 `cnpm` 安装模块：
 
 ```
 cnpm install [module-name]
