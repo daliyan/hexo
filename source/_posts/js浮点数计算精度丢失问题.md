@@ -93,7 +93,7 @@ tags: js
      /*
       * 将浮点数去除小数点，返回整数和倍数。如 3.14 >> 314，倍数是 100
       * @param n {number} 浮点数
-      * return {object} 
+      * return {object}
       * {num: 314, times: 100}
       * */
      function toInt(n) {
@@ -106,16 +106,16 @@ tags: js
          }
          return res;
      }
- 
+
      function operation(a, b, op) {
          var result; //最终计算的值
          var o1 = toInt(a), o2 = toInt(b);
- 
+
          var n1 = o1.num, t1 = o1.times;
          var n2 = o2.num, t2 = o2.times;
- 
+
          var max = Math.max(t1, t2);
- 
+
          switch (op) {
              case 'add':
                  if (t1 > t2) {
@@ -129,43 +129,43 @@ tags: js
                  if (t1 > t2) {
                      result = n1 - n2 * (t1 / t2);
                  } else {
-                     result = n2 - n1 * (t2 / t1);
+                     result = n1 * (t2 / t1) - n2;
                  }
                  result = result / max;
                  break;
              case 'multiply':
-                 result = (n1 * n2) / (t1 * t2)
-                 return result
+                 result = (n1 * n2) / (t1 * t2);
+                 return result;
                  break;
              case 'divide':
-                 result = (n1 / n2) * (t2 / t1)
-                 return result
+                 result = (n1 / n2) * (t2 / t1);
+                 return result;
                  break;
- 
+
          }
          return result;
      }
- 
+
      /*加*/
      function add(a, b) {
          return operation(a, b, 'add');
      }
- 
+
      /*减*/
      function subtract(a, b) {
          return operation(a, b, 'subtract');
      }
- 
+
      /*乘*/
      function multiply(a, b) {
          return operation(a, b, 'multiply');
      }
- 
+
      /*除*/
      function divide(a, b) {
          return operation(a, b, 'divide');
      }
- 
+
      //exports
      return {
          add: add,
