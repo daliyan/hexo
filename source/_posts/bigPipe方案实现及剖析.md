@@ -27,5 +27,7 @@ Web2.0的重要特征是网页显示大量动态内容，即web2.0注重网页�
 
 
 http://www.searchtb.com/2011/04/an-introduction-to-bigpipe.html
+
+待续...
    
 
