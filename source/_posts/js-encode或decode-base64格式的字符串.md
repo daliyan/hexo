@@ -1,7 +1,7 @@
 ---
 title: js encode或decode base64格式的字符串
 date: 2016-11-16 16:50:07
-tags:
+tags: [javascript, base64]
 ---
 
 #### 方式一：Chrome、FireFox等现代主流浏览器或IE10及以上版本。
