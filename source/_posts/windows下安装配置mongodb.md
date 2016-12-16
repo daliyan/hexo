@@ -58,5 +58,6 @@ tags: [mongodb]
 ```language-git
 net start MongoDB  //启动MongoDB服务  
 net stop MongoDB  //停止MongoDB服务   
-mongod --remove //移除MongoDB服务  
+mongod --remove  //移除MongoDB服务 
+sc delete MongoDB   //通过该方式删除的话，服务中的 mongod仍会存在，注册表中不存在了，再重启之后服务的mongodb才会消失
 ```
