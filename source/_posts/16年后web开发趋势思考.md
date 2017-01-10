@@ -1,7 +1,7 @@
 ---
 title: 16年后web开发趋势思考
 date: 2016-06-27 15:21:44
-tags: [前端]
+tags: [随笔]
 ---
 
 > Rewriting your Frontend Framework every six week !!!
