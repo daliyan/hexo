@@ -37,3 +37,13 @@ console.log(encodedString); // 输出: "SGVsbG8gV29ybGQh"
 var decodedString = Base64.decode(encodedString);
 console.log(decodedString); // 输出: "Hello World!"
 ```
+
+#### Nodejs端处理
+
+```language-javascript
+// 加密
+new Buffer(string).toString("base64")
+
+// 解密
+new Buffer(string, "base64").toString()
+```
