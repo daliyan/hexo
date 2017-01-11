@@ -27,8 +27,6 @@ port=27017 #端口号 默认为27017
   
 这里仅指定了几个常用项，更多详细配置请参考官方文档 http://docs.mongodb.org/manual/reference/configuration-options/
   
-### 四、启动mongdb服务。
-  
 至此`mongodb`文件夹下有文件夹及文件：
 
 ```language-git
@@ -36,18 +34,20 @@ D:\ mongodb\bin
 D:\ mongodb\data\db
 D:\ mongodb\data\log
 ```
+  
+### 四、启动mongdb服务。
 
-配置文件和相关目录建好后使用如下方式启动mongodb：
+配置文件和相关目录建好后可使用以下几种方式启动mongodb。
 
 控制台进入`D:\ mongodb\bin`目录，执行以下命令:
 
-1 . 普通启动 
++ **普通启动** 
 
 ```language-git
 mongod --config D:\mongodb\mongodb.cfg
 ```
 
-2 . 安装为Windows服务
++ **安装为Windows服务**
 
 ```language-git
 mongod --config D:\mongodb\mongodb.cfg --install
@@ -56,20 +56,20 @@ mongod --config D:\mongodb\mongodb.cfg --install
 注：2.6版 这种方式在win7、win8 64位版无法安装成功，其他系统未测试
 BUG链接 https://jira.mongodb.org/browse/SERVER-13515
 
-3 . 使用SC命令安装为Windows服务
++ **使用SC命令安装为Windows服务**
 
  ```language-git
 sc create MongoDB binPath= "D:\mongodb\bin\mongod.exe --service --config=D:\mongodb\mongodb.cfg"
 ```
 
-在浏览器输入：http://localhost:27017/，可以看到如下提示：
-You are trying to access MongoDB on the native driver port. For http diagnostic access, add 1000 to the port number
+在浏览器输入：[http://localhost:27017/](http://localhost:27017/)，可以看到如下提示：
+> You are trying to access MongoDB on the native driver port. For http diagnostic access, add 1000 to the port number
 
 如此，说明MongoDB数据库服务已经成功启动了。
 
 我们可以再启一个shell窗口，执行 `mongo` 命令，可以看到如下提示：
-MongoDB shell version: 2.6.4
-connecting to: test
+> MongoDB shell version: 2.6.4
+  connecting to: test
 
 这样的话，说明已经连接到mongodb默认 test 集合了。
 
