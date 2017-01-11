@@ -61,6 +61,20 @@ BUG链接 https://jira.mongodb.org/browse/SERVER-13515
  ```language-git
 sc create MongoDB binPath= "D:\mongodb\bin\mongod.exe --service --config=D:\mongodb\mongodb.cfg"
 ```
+
+在浏览器输入：http://localhost:27017/，可以看到如下提示：
+You are trying to access MongoDB on the native driver port. For http diagnostic access, add 1000 to the port number
+
+如此，说明MongoDB数据库服务已经成功启动了。
+
+我们可以再启一个shell窗口，执行 `mongo` 命令，可以看到如下提示：
+MongoDB shell version: 2.6.4
+connecting to: test
+
+这样的话，说明已经连接到mongodb默认 test 集合了。
+
+我们也可以使用 `mongoVUE` 等可视化工具查看库中的数据。
+
   
 ### 五、系统服务启动与删除。
 
