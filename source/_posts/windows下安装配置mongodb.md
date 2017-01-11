@@ -73,7 +73,7 @@ sc create MongoDB binPath= "D:\mongodb\bin\mongod.exe --service --config=D:\mong
 
 这样的话，说明已经连接到mongodb默认 test 集合了。
 
-我们也可以使用 `mongoVUE` 等可视化工具查看库中的数据。
+我们也可以使用 `mongoVUE` 、 `Robomongo` 等可视化工具查看库中的数据。
 
   
 ### 五、系统服务启动与删除。
