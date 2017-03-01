@@ -25,7 +25,9 @@ quiet=true #这个选项可以过滤掉一些无用的日志信息，若需要�
 port=27017 #端口号 默认为27017
 ```
   
-这里仅指定了几个常用项，更多详细配置请参考官方文档 http://docs.mongodb.org/manual/reference/configuration-options/
+这里仅指定了几个常用项，更多详细配置请参考官方文档 http://docs.mongodb.org/manual/reference/configuration-options/   
+正常情况下，我们一般配置`dbpath`和`logpath`就够了。
+
   
 至此`mongodb`文件夹下有文件夹及文件：
 
@@ -45,6 +47,7 @@ D:\ mongodb\data\log
 
 ```language-git
 mongod --config D:\mongodb\mongodb.cfg
+mongod -f ../mongodb.cfg  #简写
 ```
 
 + **安装为Windows服务**
